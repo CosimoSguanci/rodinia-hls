@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <ap_fixed.h>
+
 
 
 #define GRID_ROWS 1024
@@ -32,11 +34,11 @@
 #define COVERAGE 0.000000000001
 #define MAX_RADIUS 1
 
-#define TYPE float
+#define TYPE ap_fixed
 
 struct bench_args_t {
-    float imgvf[GRID_ROWS * GRID_COLS];
-    float I[GRID_ROWS * GRID_COLS];
+    ap_fixed<8, 1> imgvf[GRID_ROWS * GRID_COLS];
+    ap_fixed<8, 1> I[GRID_ROWS * GRID_COLS];
 };
 
 #endif
